@@ -19,4 +19,4 @@ var Obiekty = {
             this.h = h;
         }
     }
-}
+};

@@ -49,7 +49,7 @@ var Silnik = {
     },
 
     aktualizacje: function(dane) {
-
+        Animacje.aktualizacja(dane);
     },
 
     render: function(dane) {
