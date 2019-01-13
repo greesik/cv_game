@@ -53,7 +53,7 @@ var Silnik = {
     },
 
     render: function(dane) {
-
+        Render.aktualizacja(dane);
     },
 };
 
