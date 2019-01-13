@@ -25,6 +25,8 @@ var Silnik = {
             canvas: canvas,
             grafika: grafika,
         };
+
+        Obiekty.ini(dane);
         Silnik.start(dane);
 
     },
