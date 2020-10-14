@@ -1,6 +1,6 @@
-let Obiekty = {
+var Obiekty = {
     ini: function(dane) {
-        let niebo = {
+        var niebo = {
             obraz: new Obiekty.zadania.Obraz(dane.grafika, 0, 208, 960, 208),
             x: 0,
             y: 0,
@@ -8,9 +8,18 @@ let Obiekty = {
             h: 624
         };
 
+        var mapa = {
+            obraz: new Obiekty.zadania.Obraz(dane.grafika, 0, 0, 1440, 208),
+            x: 0,
+            y: 0,
+            w: 4320,
+            h: 624
+        };
+
         dane.obiekty = {};
 
         dane.obiekty.niebo = niebo;
+        dane.obiekty.mapa = mapa;
     },
 
     zadania: {
@@ -22,4 +31,4 @@ let Obiekty = {
             this.h = h;
         }
     }
-};
+}
