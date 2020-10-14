@@ -1,10 +1,10 @@
-var Silnik = {
-    ini: function() {
-        var skyCanvas = document.getElementById("sky-canvas");
-        var bgCanvas = document.getElementById("bg-canvas");
-        var fgCanvas = document.getElementById("fg-canvas");
+let Silnik = {
+    ini: () => {
+        let skyCanvas = document.querySelector("#sky-canvas");
+        let bgCanvas = document.querySelector("#bg-canvas");
+        let fgCanvas = document.querySelector("#fg-canvas");
 
-        var canvas = {
+        let canvas = {
             skyCanvas: skyCanvas,
             bgCanvas: bgCanvas,
             fgCanvas: fgCanvas,
@@ -13,14 +13,14 @@ var Silnik = {
             fgCtx: fgCanvas.getContext("2d"),
         };
 
-        var grafika = new Image();
+        let grafika = new Image();
         grafika.src = "img/stylesheet.png";
 
         grafika.addEventListener("load", function(){
-            var grafika = this;
+            let grafika = this;
         });
 
-        var dane = {
+        let dane = {
             nrKlatki: 0,
             canvas: canvas,
             grafika: grafika,
@@ -30,8 +30,8 @@ var Silnik = {
         Silnik.start(dane);
 
     },
-    start: function(dane) {
-        var petla = function() {
+    start: (dane) => {
+        let petla = () => {
             Silnik.wejscie(dane);
             Silnik.aktualizacje(dane);
             Silnik.render(dane);
